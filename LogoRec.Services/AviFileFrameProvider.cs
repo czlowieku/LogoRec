@@ -14,11 +14,11 @@ namespace LogoRec.Services
         public IEnumerable<Frame> GetFrames(string path)
         {
             var capture = new Capture(path);
-            Image<Bgr, Byte> img = capture.QueryFrame();
+           Mat img = capture.QueryFrame();
             while (img != null)
             {
                 img = capture.QueryFrame();
-                yield return new Frame(img);
+             yield return new Frame(img);
             }
             capture.Dispose();
         }

@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Emgu.CV;
-using Emgu.CV.Structure;
 
 namespace Shared
 {
@@ -17,9 +16,9 @@ namespace Shared
 
     public class Frame
     {
-        public Image<Bgr, byte> Img { get; set; }
+        public Mat Img { get; set; }
 
-        public Frame(Image<Bgr,byte> img)
+        public Frame(Mat img)
         {
             Img = img;
         }
@@ -27,5 +26,6 @@ namespace Shared
 
     public class AnalyzeResult  
     {
+
     }
 }

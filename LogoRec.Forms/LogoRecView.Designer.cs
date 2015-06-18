@@ -29,34 +29,45 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.imageBox1 = new Emgu.CV.UI.ImageBox();
-            ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).BeginInit();
+            this.imageBox2 = new Emgu.CV.UI.ImageBox();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.imageBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // imageBox1
+            // imageBox2
             // 
-            this.imageBox1.Location = new System.Drawing.Point(12, 12);
-            this.imageBox1.Name = "imageBox1";
-            this.imageBox1.Size = new System.Drawing.Size(523, 462);
-            this.imageBox1.TabIndex = 2;
-            this.imageBox1.TabStop = false;
+            this.imageBox2.Location = new System.Drawing.Point(12, 12);
+            this.imageBox2.Name = "imageBox2";
+            this.imageBox2.Size = new System.Drawing.Size(664, 455);
+            this.imageBox2.TabIndex = 2;
+            this.imageBox2.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(682, 25);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // LogoRecView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(976, 486);
-            this.Controls.Add(this.imageBox1);
+            this.ClientSize = new System.Drawing.Size(914, 519);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.imageBox2);
             this.Name = "LogoRecView";
-            this.Text = "LogoRecView";
-            ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Emgu.CV.UI.ImageBox imageBox1;
+
+        private Emgu.CV.UI.ImageBox imageBox2;
+        private System.Windows.Forms.Button button1;
 
     }
 }

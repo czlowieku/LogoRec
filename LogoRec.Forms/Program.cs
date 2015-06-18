@@ -28,16 +28,18 @@ namespace LogoRec.Forms
         private static WindsorContainer GetContainer()
         {
             var container = new WindsorContainer();
-
+            
             container.Register(Component.For<ILogoRecPresenter>().ImplementedBy<LogoRecPresenter>());
             container.Register(Component.For<ILogoRecView>().ImplementedBy<LogoRecView>());
             container.Register(Component.For<LogoRecViewModel>());
 
 
             container.Register(Component.For<IFrameProvider>().ImplementedBy<AviFileFrameProvider>());
+            container.Register(Component.For<IFrameAnalyzer>().ImplementedBy<EmguCvFrameAnalyzer>());
+
+
 
 //            container.Register(Component.For<IFramesProcessor>().ImplementedBy<FramesProcessor>());
-//            container.Register(Component.For<IFrameAnalyzer>().ImplementedBy<AForgeSimpleFrameAnalyzer>());
 //            container.Register(Component.For<IFrameFactory>().ImplementedBy<FrameFactory>());
             return container;
         }
