@@ -39,7 +39,7 @@ namespace LogoRec.Forms
             _view.GoButtonPressed += (sender, args) =>
             {
                DrawMatches draw=new DrawMatches();
-               var m = new Image<Gray, Byte>(@"box.png");
+               var m = new Image<Gray, Byte>(@"E:\Dev\LogoRec\LogoRec.Forms\bin\Debug\box.png");
                 new Thread(() =>
                 {
                     foreach (
@@ -49,9 +49,19 @@ namespace LogoRec.Forms
                         )
                     {
                         var a = img.Img.ToImage<Gray, byte>();
-                        long mt;
-                        draw.Draw(m, a, out mt);
-                        model.ViewedImage = img.Img;
+                        try
+                        {
+                           
+                            long mt;
+                            var res = draw.Draw(m, a, out mt);
+                            model.ViewedImage = res;
+                        }
+                        catch (Exception E)
+                        {
+                            model.ViewedImage = a.Mat;
+                          
+                        }
+                       
                        // Thread.Sleep(1000);
                     }
                 }).Start();
