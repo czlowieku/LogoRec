@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrameCopyier", "FrameCopyier\FrameCopyier.csproj", "{FAF5A648-E172-4D07-A5F8-3AC291FF5A13}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.Tests", "Services.Tests\Services.Tests.csproj", "{BC2B762A-60CA-4E49-967C-8FDA4E67F38A}"
@@ -21,6 +19,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoRec.Services", "LogoRec.Services\LogoRec.Services.csproj", "{F1F8C6F5-65C1-470B-87D7-319EDE7B04E6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoRec.Shared", "LogoRec.Shared\LogoRec.Shared.csproj", "{415190D7-AAD4-4CEF-8CB7-A37F843359EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{381ABC87-C4AD-48D6-AC77-274952BF6A64}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,5 +55,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FAF5A648-E172-4D07-A5F8-3AC291FF5A13} = {381ABC87-C4AD-48D6-AC77-274952BF6A64}
+		{F23D8C46-758D-4E76-9EE9-DD4C92B4FB98} = {381ABC87-C4AD-48D6-AC77-274952BF6A64}
 	EndGlobalSection
 EndGlobal

@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Emgu.CV;
 
 namespace Shared
 {
@@ -12,16 +11,6 @@ namespace Shared
     public interface IFrameAnalyzer
     {
         IEnumerable<AnalyzeResult> AnalyzeFrames(IEnumerable<Frame> frames);
-    }
-
-    public class Frame
-    {
-        public Mat Img { get; set; }
-
-        public Frame(Mat img)
-        {
-            Img = img;
-        }
     }
 
     public class AnalyzeResult  
