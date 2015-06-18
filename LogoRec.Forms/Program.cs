@@ -34,7 +34,7 @@ namespace LogoRec.Forms
             container.Register(Component.For<LogoRecViewModel>());
 
 
-            container.Register(Component.For<IFrameProvider<Frame>>().ImplementedBy<AviFileFrameProvider>());
+            container.Register(Component.For<IFrameProvider>().ImplementedBy<AviFileFrameProvider>());
 
 //            container.Register(Component.For<IFramesProcessor>().ImplementedBy<FramesProcessor>());
 //            container.Register(Component.For<IFrameAnalyzer>().ImplementedBy<AForgeSimpleFrameAnalyzer>());

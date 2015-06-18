@@ -9,7 +9,7 @@ using Shared;
 
 namespace LogoRec.Services
 {
-    public class AviFileFrameProvider : IFrameProvider<Frame>
+    public class AviFileFrameProvider : IFrameProvider
     {
         public IEnumerable<Frame> GetFrames(string path)
         {
@@ -18,13 +18,23 @@ namespace LogoRec.Services
             while (img != null)
             {
                 img = capture.QueryFrame();
-                yield return new Frame(string.Empty, string.Empty, string.Empty, img);
+                yield return new Frame(img);
             }
             capture.Dispose();
         }
 
 
     }
+    public class EmguCvFrameAnalyzer:IFrameAnalyzer
+    {
+        public IEnumerable<AnalyzeResult> AnalyzeFrames(IEnumerable<Frame> frames)
+        {
+
+
+            return null;
+        }
+    }
+
 }
 
 
