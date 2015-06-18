@@ -26,6 +26,7 @@ namespace LogoRec.Forms
             _model = model;
             _view.Bind(_model);
             _model.PropertyChanged += _model_PropertyChanged;
+
         }
 
       

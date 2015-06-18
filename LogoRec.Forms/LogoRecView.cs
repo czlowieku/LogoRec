@@ -16,12 +16,11 @@ namespace LogoRec.Forms
         public LogoRecView()
         {
             InitializeComponent();
-            
         }
 
         public void Bind(LogoRecViewModel model)
         {
-           
+            this.imageBox1.DataBindings.Add("Image", model, "ViewedImage", false, DataSourceUpdateMode.OnPropertyChanged);
         }
 
         public void ShowDialogg()
